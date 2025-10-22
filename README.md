@@ -63,7 +63,8 @@ php artisan make:request [NomeDoRequest]
 22) Ajuste nos campos do formulário - Permanece os dados usados na última tentativa de acesso  --> Função old({{ 'NomeDoCampo' }})
 23) Na controller, criou uma função para cadastro do usuário armazenando os dados da página de cadastro / Redireciona para a página raiz 
 24) Na view index (listar) apresenta uma mensagem de sucesso --> Atráves de uma condicional if e o helper with() - encaminhar dados para a sessão (normalmente para exibir mensagens temporárias como "Usuário criado com sucesso!")
-25)
+25) No controller estabelece a lógica para recuperar dados da tabela dentro da função index que corresponde ao listar da página - Eloquent ORM
+26) Define uma diretiva @forelse para iterar sobre a coleção de dados do BD, assim permitindo apresentar todos os dados na view. 
 
 
 

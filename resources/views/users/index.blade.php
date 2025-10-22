@@ -13,10 +13,19 @@
 
       <!-- Mensagem de sucesso -->
     @if(session('success')) 
-        <p>
+        <p style="#086;">
             {{ session('success') }}
         </p>
     @endif
+
+      <!--Iterar sobre coleções / Apresenta dados da tabela -->
+    @forelse ($users as $user)
+        ID: {{ $user->id }}<br>
+        Nome: {{ $user->name }}<br>
+        E-mail: {{ $user->email }}<br><hr>
+    @empty
+
+    @endforelse
 
 </body>
 </html>

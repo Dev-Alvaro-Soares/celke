@@ -2,15 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use App\Http\Requests\UserRequest;
+use App\Models\User;
 
 class UserController extends Controller
 {
     //
     public function index() {
-        // Carregar a View
-        return view('users.index');
+
+        // Recuperar os registros do BD 
+        $users = User::orderByDesc('id')->get();
+
+        // Carregar a View / Passa os dados do BD para a view atráves da tabela 'users'
+        return view('users.index', ['users' => $users]);
     }
 
     public function create() {
@@ -22,13 +26,14 @@ class UserController extends Controller
           // Validar o formulário 
         $request->validated();
 
-          // Cadastrar o usuário
+          // Cadastrar o usuário no BD
         User::create([
             'name'     => $request->name,
             'email'    => $request->email,
             'password' => $request->password,
         ]);
 
+          // Redirecionar o usuário e apresentar mensagem de sucesso
         return redirect()->route('user.index')->with('success', 'Usuário cadastrado com sucesso!');
     }
 }
