@@ -65,7 +65,11 @@ php artisan make:request [NomeDoRequest]
 24) Na view index (listar) apresenta uma mensagem de sucesso --> Atráves de uma condicional if e o helper with() - encaminhar dados para a sessão (normalmente para exibir mensagens temporárias como "Usuário criado com sucesso!")
 25) No controller estabelece a lógica para recuperar dados da tabela dentro da função index que corresponde ao listar da página - Eloquent ORM
 26) Define uma diretiva @forelse para iterar sobre a coleção de dados do BD, assim permitindo apresentar todos os dados na view. 
+27) Criação de uma rota para apresentação --> user.show
+28) Na controller, cria uma função que retorna uma view chamada de users.show / Ocorre a passagem de dados 
+29) Na view do listar acrescenta um link para direcionar ao apresentar 
+30) Cria uma view para o apresentar --> Comando: php artisan make:view users/show
+31) Na view show, cria conteudo HTML com um link para redirecioanar a pasta raiz (listar)
 
 
-
-## Voltar a assitir o vídeo aos 30m  -  https://www.youtube.com/watch?v=ZQJdYM1m4q0 ##
+## Voltar a assitir o vídeo aos 48:50m  -  https://www.youtube.com/watch?v=ZQJdYM1m4q0 ##
