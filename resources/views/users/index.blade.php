@@ -11,5 +11,12 @@
 
     <h2>Listar usuários</h2>
 
+      <!-- Mensagem de sucesso -->
+    @if(session('success')) 
+        <p>
+            {{ session('success') }}
+        </p>
+    @endif
+
 </body>
 </html>

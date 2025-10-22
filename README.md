@@ -60,7 +60,10 @@ php artisan make:request [NomeDoRequest]
 19) Uso da funcionalidade Laravel para a implementação da validação --> php artisan make:request UserRequest / A validação indica as regras de controle do formulário 
 20) Definição das regras de controle e mensagens de erro apresentadas
 21) No controller é realizado a injeção de dependência do UserRequest
-
+22) Ajuste nos campos do formulário - Permanece os dados usados na última tentativa de acesso  --> Função old({{ 'NomeDoCampo' }})
+23) Na controller, criou uma função para cadastro do usuário armazenando os dados da página de cadastro / Redireciona para a página raiz 
+24) Na view index (listar) apresenta uma mensagem de sucesso --> Atráves de uma condicional if e o helper with() - encaminhar dados para a sessão (normalmente para exibir mensagens temporárias como "Usuário criado com sucesso!")
+25)
 
 
 

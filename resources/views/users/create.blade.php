@@ -13,11 +13,12 @@
 
       <!-- Exibir erros de validação - Se existir erros acessa esse if então percorrer as mensagens de erro -->
     @if($errors->any()) 
-        <p style="color: #f00;">
         @foreach($errors->all() as $error)
+         <p style="color: #f00;">
             {{ $error }}
+         </p>    
         @endforeach
-        </p>
+        
     @endif
 
     <form action="{{ route('user-store') }}" method="POST">
@@ -26,13 +27,13 @@
 
           <!-- Campos do formulário -->
         <label>Nome: </label>
-        <input type="text" name="name" placeholder="Nome completo"><br><br>
+        <input type="text" name="name" placeholder="Nome completo" value="{{ old('name') }}"><br><br>
 
         <label><E-mail></E-mail>E-mail: </label>
-        <input type="email" name="email" placeholder="Melhor email do usuário"><br><br>
+        <input type="email" name="email" placeholder="Melhor email do usuário" value="{{ old('email') }}"><br><br>
 
         <label>Senha: </label>
-        <input type="password" name="password" placeholder="Senha no mínimo com 6 caracteres"><br><br>
+        <input type="password" name="password" placeholder="Senha no mínimo com 6 caracteres" value="{{ old('password') }}"><br><br>
 
         <button type="submit">Cadastrar</button>
     </form>
