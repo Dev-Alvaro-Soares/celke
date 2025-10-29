@@ -46,4 +46,11 @@ class UserController extends Controller
     {
         return view('users.edit', ['user' => $user]);
     }
+
+      // Validação dos dados editados e atualização no BD
+    public function update(UserRequest $request)
+    {
+          // Validação dos dados editados e atualização no BD
+        $request->validated();
+    }
 }

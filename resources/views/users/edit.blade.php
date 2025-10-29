@@ -28,10 +28,11 @@
 
           <!-- Campos do formulário -->
         <label>Nome: </label>
-        <input type="text" name="name" placeholder="Nome completo" value="{{ old('name') }}"><br><br>
+          <!-- Reaproveitou o código do create.blade.php e adicionou o segundo parâmetro na função old() para preencher o campo com o valor atual do usuário existente no Banco de dados-->
+        <input type="text" name="name" placeholder="Nome completo" value="{{ old('name', $user->name) }}"><br><br>
 
         <label><E-mail></E-mail>E-mail: </label>
-        <input type="email" name="email" placeholder="Melhor email do usuário" value="{{ old('email') }}"><br><br>
+        <input type="email" name="email" placeholder="Melhor email do usuário" value="{{ old('email', $user->email) }}"><br><br>
 
         <label>Senha: </label>
         <input type="password" name="password" placeholder="Senha no mínimo com 6 caracteres" value="{{ old('password') }}"><br><br>
@@ -39,6 +40,5 @@
         <button type="submit">Salvar</button>
     </form>
 
-     {{ dd($user) }}
 </body>
 </html>

@@ -79,7 +79,9 @@ php artisan make:request [NomeDoRequest]
 38) Por fim, estabeleceu um link para navegar entre as páginas e configurou as rotas
 39) Criação de uma rota para armazenar os dados recebidos da edição (edit)
 40) Na view do Edit, reaproveitou o código de erro e formulário aplicado no create
-41)
+41) Aproveitou o código utilizado no create do formulário, para deixar programado de forma que ao selecionar o "editar" seja apresentado as informções de nome e email salvas no banco de dados.
+42) Definido a chamada do formulário e a rota. Fez na controller o método responsável pela atualização
+43) Dentro do método estabeleceu uma validação, de forma a possibilitar a . 
 
 
-## Voltar a assitir o vídeo aos 1:01:42m  -  https://www.youtube.com/watch?v=ZQJdYM1m4q0 ##
+## Voltar a assitir o vídeo aos 1:07:10m  -  https://www.youtube.com/watch?v=ZQJdYM1m4q0 ##

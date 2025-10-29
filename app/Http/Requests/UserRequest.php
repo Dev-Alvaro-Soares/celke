@@ -22,9 +22,12 @@ class UserRequest extends FormRequest
      */
     public function rules(): array
     {
+
+        $userId = $this->route('user');
+
         return [
             'name' => 'required',                   // Campo obrigatório    
-            'email' => 'required | email',          // Campo obrigatório e formato de email
+            'email' => 'required | email | unique:users,email' . ($userId ? $userId : null),          // Campo obrigatório - formato de email - ignorar o e-mail do usuário atual durante a validação de unicidade. Isso é útil, por exemplo, ao atualizar um cadastro.
             'password' => 'required | min:6',       // Campo obrigatório e tamanho mínimo de 6 caracteres
         ];
     }
@@ -35,6 +38,7 @@ class UserRequest extends FormRequest
             'name.required' => 'O campo nome é obrigatório.',
             'email.required' => 'O campo e-mail é obrigatório.',
             'email.email' => 'O campo e-mail deve conter um endereço de e-mail válido.',
+            'email.unique' => 'O campo e-mail deve conter um endereço de e-mail válido.',
             'password.required' => 'O campo senha é obrigatório.',
             'password.min' => 'O campo senha deve conter no mínimo 6 caracteres.',
         ];
