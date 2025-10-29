@@ -11,4 +11,7 @@ Route::get('/show-user/{user}', [UserController::class, 'show'])->name('user.sho
 Route::get('/create-user', [UserController::class, 'create'])->name('user.create');
   // Rota de ação do formulário (armazenamento)
 Route::post('/store-user', [UserController::class, 'store'])->name('user-store');
-
+  // Rota de edição
+Route::get('/edit-user/{user}', [UserController::class, 'edit'])->name('user.edit');
+  // Rota para armazenar os dados editados
+Route::put('/update-user/{user}', [UserController::class, 'update'])->name('user.update');

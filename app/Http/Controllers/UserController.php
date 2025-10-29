@@ -40,4 +40,10 @@ class UserController extends Controller
           // Redirecionar o usuário e apresentar mensagem de sucesso
         return redirect()->route('user.index')->with('success', 'Usuário cadastrado com sucesso!');
     }
+
+      // Método para edição do usuário / Injeção de dependência do Model User --> Uma model no Laravel é uma classe que representa uma tabela do banco de dados, “Injetar dados” significa atribuir valores aos atributos da model. 
+    public function edit(user $user) 
+    {
+        return view('users.edit', ['user' => $user]);
+    }
 }

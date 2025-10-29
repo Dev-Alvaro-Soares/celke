@@ -70,6 +70,16 @@ php artisan make:request [NomeDoRequest]
 29) Na view do listar acrescenta um link para direcionar ao apresentar 
 30) Cria uma view para o apresentar --> Comando: php artisan make:view users/show
 31) Na view show, cria conteudo HTML com um link para redirecioanar a pasta raiz (listar)
+32) Na view Show, recupera de forma dinâmica os dados armazenados na tabela e os apresenta (id / name / email / cadastrado)
+33) Utilização da biblioteca nativa do Laravel (Carbon) para converter o horário apresentado pelo sistema
+34) Adicionou uma rota para editar 
+35) Na view raiz (listar), criou um link para editar
+36) Criação do método para a edição
+37) Criação de uma view para editar
+38) Por fim, estabeleceu um link para navegar entre as páginas e configurou as rotas
+39) Criação de uma rota para armazenar os dados recebidos da edição (edit)
+40) Na view do Edit, reaproveitou o código de erro e formulário aplicado no create
+41)
 
 
-## Voltar a assitir o vídeo aos 48:50m  -  https://www.youtube.com/watch?v=ZQJdYM1m4q0 ##
+## Voltar a assitir o vídeo aos 1:01:42m  -  https://www.youtube.com/watch?v=ZQJdYM1m4q0 ##
